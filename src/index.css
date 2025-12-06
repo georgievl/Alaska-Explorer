@@ -1,19 +1,280 @@
 /* src/index.css */
 
 :root {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
   line-height: 1.5;
-  color: #0b1420;
-  background-color: #f3f6fb;
+  color: #0b1220;
+  background-color: #050816;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
+  background: radial-gradient(circle at top, #21325a 0, #3d3f44 55%);
+  color: #e5e7eb;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 main {
-  max-width: 1200px;
+  max-width: 1120px;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+/* Home layout */
+
+.home {
+  min-height: 100vh;
+}
+
+/* Hero */
+
+.hero {
+  position: relative;
+  min-height: 60vh;
+  background-size: cover;
+  background-position: center center;
+}
+
+.hero-overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+  box-sizing: border-box;
+}
+
+.hero-content {
+  max-width: 720px;
+  width: 100%;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.hero-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  color: #bfdbfe;
+  margin-bottom: 0.75rem;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.hero-subtitle {
+  font-size: 0.98rem;
+  color: #e5e7eb;
+  max-width: 36rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* Buttons */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 1.2rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.15s ease-out;
+}
+
+.btn.primary {
+  background: linear-gradient(to right, #38bdf8, #0ea5e9);
+  color: #0b1120;
+  font-weight: 600;
+}
+
+.btn.primary:hover {
+  filter: brightness(1.05);
+}
+
+.btn.secondary {
+  background-color: #020617;
+  border-color: #1e293b;
+}
+
+.btn.secondary:hover {
+  border-color: #38bdf8;
+}
+
+.btn.ghost {
+  background-color: transparent;
+  border-color: #1e293b;
+}
+
+.btn.ghost:hover {
+  border-color: #38bdf8;
+}
+
+/* Sections */
+
+.section {
+  margin-top: 3rem;
+}
+
+.section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.section-header h2 {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.section-link {
+  font-size: 0.85rem;
+  color: #a5b4fc;
+  white-space: nowrap;
+}
+
+.section-link:hover {
+  text-decoration: underline;
+}
+
+.section-subtitle {
+  font-size: 0.9rem;
+  max-width: 32rem;
+  color: #cbd5f5;
+  margin: 0.25rem 0 0;
+}
+
+/* Featured guides grid */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.guide-card {
+  background: radial-gradient(circle at top left, #0f172a, #020617);
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid #1f2937;
+  display: flex;
+  flex-direction: column;
+}
+
+.guide-card-image {
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+}
+
+.guide-card-body {
+  padding: 0.9rem 1rem 1rem;
+}
+
+.guide-card-meta {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin: 0 0 0.3rem;
+}
+
+.guide-card-title {
+  font-size: 1rem;
+  margin: 0 0 0.5rem;
+}
+
+.guide-card-link {
+  font-size: 0.85rem;
+  color: #38bdf8;
+}
+
+/* Regions grid */
+
+.region-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.region-card {
+  border-radius: 1rem;
+  border: 1px solid #1f2937;
+  padding: 1rem;
+  background: radial-gradient(circle at top left, #020617, #020617);
+}
+
+.region-card h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1rem;
+}
+
+.region-card p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #d1d5db;
+}
+
+/* About teaser */
+
+.about-teaser {
+  margin-bottom: 1rem;
+}
+
+.about-content {
+  border-radius: 1.25rem;
+  border: 1px solid #1e293b;
+  background: radial-gradient(circle at top, #0b1220, #020617);
+  padding: 1.5rem 1.25rem;
+}
+
+.about-content h2 {
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+}
+
+.about-content p {
+  font-size: 0.9rem;
+  margin: 0 0 0.6rem;
+  color: #e5e7eb;
+}
+
+/* Responsive tweaks */
+
+@media (max-width: 768px) {
+  main {
+    padding-inline: 1rem;
+  }
+
+  .hero-content {
+    text-align: left;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
