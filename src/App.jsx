@@ -13,6 +13,8 @@ import EditGuidePage from "./pages/EditGuidePage.jsx";
 import ProfilePage from "./pages/ProfilePage.jsx";
 
 import { Header } from "./components/Header/Header.jsx";
+import { PrivateRoute } from "./components/route-guards/PrivateRoute.jsx";
+import { GuestRoute } from "./components/route-guards/GuestRoute.jsx";
 
 function App() {
   return (
@@ -28,15 +30,57 @@ function App() {
           <Route path="/guides" element={<GuidesCatalogPage />} />
           <Route path="/guides/:guideId" element={<GuideDetailsPage />} />
 
-          {/* Auth routes */}
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/register" element={<RegisterPage />} />
+          {/* Guest-only routes */}
+          <Route
+            path="/login"
+            element={
+              <GuestRoute>
+                <LoginPage />
+              </GuestRoute>
+            }
+          />
+          <Route
+            path="/register"
+            element={
+              <GuestRoute>
+                <RegisterPage />
+              </GuestRoute>
+            }
+          />
 
-          {/* Private routes (we'll guard these later) */}
-          <Route path="/my-guides" element={<MyGuidesPage />} />
-          <Route path="/guides/create" element={<CreateGuidePage />} />
-          <Route path="/guides/:guideId/edit" element={<EditGuidePage />} />
-          <Route path="/profile" element={<ProfilePage />} />
+          {/* Private routes */}
+          <Route
+            path="/my-guides"
+            element={
+              <PrivateRoute>
+                <MyGuidesPage />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/guides/create"
+            element={
+              <PrivateRoute>
+                <CreateGuidePage />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/guides/:guideId/edit"
+            element={
+              <PrivateRoute>
+                <EditGuidePage />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/profile"
+            element={
+              <PrivateRoute>
+                <ProfilePage />
+              </PrivateRoute>
+            }
+          />
         </Routes>
       </main>
     </>

@@ -1,4 +1,3 @@
-// src/contexts/AuthContext.jsx
 import { createContext, useContext, useEffect, useState } from "react";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../config/firebase";
@@ -7,11 +6,9 @@ import * as authService from "../services/authService";
 const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
-  const [user, setUser] = useState(null);       // { uid, email, displayName }
-  const [loading, setLoading] = useState(true); // while checking Firebase
-
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
-    // Listen to Firebase auth changes (login/logout/refresh)
     const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
       if (firebaseUser) {
         const { uid, email, displayName } = firebaseUser;
@@ -22,13 +19,11 @@ export function AuthProvider({ children }) {
       setLoading(false);
     });
 
-    // Cleanup listener on unmount
     return () => unsubscribe();
   }, []);
 
   const isAuthenticated = !!user;
 
-  // Wrap service functions so components use context only
   const handleRegister = async (email, password, displayName) => {
     const newUser = await authService.register(email, password, displayName);
     const { uid, email: userEmail, displayName: name } = newUser;
@@ -57,7 +52,6 @@ export function AuthProvider({ children }) {
 
   return (
     <AuthContext.Provider value={value}>
-      {/* Optional: you can show a spinner while loading initial auth state */}
       {loading ? null : children}
     </AuthContext.Provider>
   );
