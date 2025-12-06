@@ -1,5 +1,5 @@
 const HERO_IMAGE =
-  "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg"; // Alaska-like placeholder
+  "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg";
 const FEATURED_GUIDES = [
   {
     id: "exit-glacier",

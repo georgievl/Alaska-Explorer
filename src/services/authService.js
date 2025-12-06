@@ -10,11 +10,12 @@ import { auth } from "../config/firebase";
 export async function register(email, password, displayName) {
   const result = await createUserWithEmailAndPassword(auth, email, password);
 
+  // Optional: set displayName
   if (displayName) {
     await updateProfile(result.user, { displayName });
   }
 
-  return result.user; // you get uid, email, displayName, etc.
+  return result.user; // contains uid, email, displayName
 }
 
 // Login existing user

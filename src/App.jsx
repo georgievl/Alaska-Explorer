@@ -12,10 +12,12 @@ import CreateGuidePage from "./pages/CreateGuidePage.jsx";
 import EditGuidePage from "./pages/EditGuidePage.jsx";
 import ProfilePage from "./pages/ProfilePage.jsx";
 
+import { Header } from "./components/Header/Header.jsx";
+
 function App() {
   return (
     <>
-      {/* Later we’ll add Header here */}
+      <Header />
 
       <main>
         <Routes>
@@ -30,7 +32,7 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
 
-          {/* Private routes (will be protected later) */}
+          {/* Private routes (we'll guard these later) */}
           <Route path="/my-guides" element={<MyGuidesPage />} />
           <Route path="/guides/create" element={<CreateGuidePage />} />
           <Route path="/guides/:guideId/edit" element={<EditGuidePage />} />

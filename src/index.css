@@ -1,5 +1,3 @@
-/* src/index.css */
-
 :root {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
@@ -19,6 +17,103 @@ body {
   min-height: 100vh;
   background: radial-gradient(circle at top, #21325a 0, #3d3f44 55%);
   color: #e5e7eb;
+}
+
+/* --- Header / Navigation --- */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(16px);
+  background: linear-gradient(to bottom,
+      rgba(15, 23, 42, 0.95),
+      rgba(15, 23, 42, 0.75),
+      transparent);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.9);
+}
+
+.nav-bar {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: #e5e7eb;
+  margin-right: 1rem;
+}
+
+.nav-link {
+  font-size: 0.85rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  color: #cbd5f5;
+  border: 1px solid transparent;
+  transition: all 0.15s ease-out;
+}
+
+.nav-link:hover {
+  border-color: #1e293b;
+  background-color: rgba(15, 23, 42, 0.8);
+}
+
+.nav-link-active {
+  border-color: #38bdf8;
+  background: radial-gradient(circle at top, #0ea5e9, #38bdf8);
+  color: #020617;
+}
+
+.nav-button {
+  background: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-size: medium;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  color: #cbd5f5;
+  transition: all 0.15s ease-out;
+}
+
+.nav-button:hover {
+  background-color: #2ab5f3;
+  color: #020617;
+}
+
+@media (max-width: 768px) {
+  .nav-bar {
+    padding-inline: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    margin-right: 0.5rem;
+  }
+
+  .nav-left {
+    flex: 1 1 100%;
+    justify-content: flex-start;
+  }
+
+  .nav-right {
+    justify-content: flex-start;
+  }
 }
 
 a {
@@ -277,4 +372,32 @@ main {
     flex-direction: column;
     align-items: flex-start;
   }
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 360px;
+  margin-top: 1rem;
+}
+
+.auth-form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  gap: 0.25rem;
+}
+
+.auth-form input {
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.5rem;
+  border: 1px solid #1f2937;
+  background-color: #020617;
+  color: #e5e7eb;
+}
+
+.form-error {
+  color: #fca5a5;
+  font-size: 0.85rem;
 }
