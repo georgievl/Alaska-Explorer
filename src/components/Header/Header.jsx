@@ -26,16 +26,8 @@ export function Header() {
                         AlaskaExplorer
                     </NavLink>
 
-                    <NavLink to="/about" className={getNavLinkClass}>
-                        About
-                    </NavLink>
-
                     <NavLink to="/guides" className={getNavLinkClass}>
                         Guides
-                    </NavLink>
-
-                    <NavLink to="/contact" className={getNavLinkClass}>
-                        Contact
                     </NavLink>
 
                     {isAuthenticated && (
@@ -49,6 +41,15 @@ export function Header() {
                             </NavLink>
                         </>
                     )}
+
+                    <NavLink to="/about" className={getNavLinkClass}>
+                        About
+                    </NavLink>
+
+                    <NavLink to="/contact" className={getNavLinkClass}>
+                        Contact
+                    </NavLink>
+
                 </div>
 
                 {/* Right side */}

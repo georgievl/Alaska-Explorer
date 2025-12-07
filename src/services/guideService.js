@@ -10,12 +10,15 @@ import {
   updateDoc,
   deleteDoc,
   serverTimestamp,
+  arrayUnion,
+  arrayRemove,
+  increment,
 } from "firebase/firestore";
 import { db } from "../config/firebase";
 
 const guidesCollection = collection(db, "guides");
+const commentsCollection = collection(db, "comments");
 
-// Create a new guide
 export async function createGuide(data, authorId, authorName) {
   const docRef = await addDoc(guidesCollection, {
     ...data,
@@ -30,7 +33,6 @@ export async function createGuide(data, authorId, authorName) {
   return docRef.id;
 }
 
-// Get all guides
 export async function getAllGuides() {
   const q = query(guidesCollection, orderBy("createdAt", "desc"));
   const snapshot = await getDocs(q);
@@ -41,7 +43,6 @@ export async function getAllGuides() {
   }));
 }
 
-// Get one guide by id
 export async function getGuideById(id) {
   const ref = doc(db, "guides", id);
   const snapshot = await getDoc(ref);
@@ -53,7 +54,6 @@ export async function getGuideById(id) {
   return { id: snapshot.id, ...snapshot.data() };
 }
 
-// Get guides by author
 export async function getGuidesByAuthor(authorId) {
   const q = query(guidesCollection, where("authorId", "==", authorId));
   const snapshot = await getDocs(q);
@@ -64,7 +64,6 @@ export async function getGuidesByAuthor(authorId) {
   }));
 }
 
-// Update a guide
 export async function updateGuide(id, data) {
   const ref = doc(db, "guides", id);
 
@@ -74,8 +73,54 @@ export async function updateGuide(id, data) {
   });
 }
 
-// Delete a guide
 export async function deleteGuide(id) {
   const ref = doc(db, "guides", id);
+  await deleteDoc(ref);
+}
+
+export async function toggleLike(guideId, userId, isCurrentlyLiked) {
+  const ref = doc(db, "guides", guideId);
+
+  if (isCurrentlyLiked) {
+    await updateDoc(ref, {
+      likedBy: arrayRemove(userId),
+      likesCount: increment(-1),
+    });
+  } else {
+    await updateDoc(ref, {
+      likedBy: arrayUnion(userId),
+      likesCount: increment(1),
+    });
+  }
+}
+
+export async function addComment(guideId, authorId, authorName, text) {
+  const docRef = await addDoc(commentsCollection, {
+    guideId,
+    authorId,
+    authorName,
+    text,
+    createdAt: serverTimestamp(),
+  });
+
+  return docRef.id;
+}
+
+export async function getCommentsForGuide(guideId) {
+  const q = query(
+    commentsCollection,
+    where("guideId", "==", guideId),
+  );
+
+  const snapshot = await getDocs(q);
+
+  return snapshot.docs.map((d) => ({
+    id: d.id,
+    ...d.data(),
+  }));
+}
+
+export async function deleteComment(commentId) {
+  const ref = doc(db, "comments", commentId);
   await deleteDoc(ref);
 }
