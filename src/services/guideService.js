@@ -124,3 +124,13 @@ export async function deleteComment(commentId) {
   const ref = doc(db, "comments", commentId);
   await deleteDoc(ref);
 }
+
+export async function getCommentsByAuthor(authorId) {
+  const q = query(commentsCollection, where("authorId", "==", authorId));
+  const snapshot = await getDocs(q);
+
+  return snapshot.docs.map((d) => ({
+    id: d.id,
+    ...d.data(),
+  }));
+}
