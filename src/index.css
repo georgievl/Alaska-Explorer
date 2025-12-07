@@ -493,6 +493,16 @@ main {
   font-size: 0.85rem;
 }
 
+.form-success {
+  color: #bbf7d0;
+  background-color: #064e3b;
+  border: 1px solid #22c55e;
+  border-radius: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
 .guide-form {
   display: flex;
   flex-direction: column;
