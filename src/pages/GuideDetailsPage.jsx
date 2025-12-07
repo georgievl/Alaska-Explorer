@@ -63,6 +63,10 @@ export default function GuideDetailsPage() {
   }, [guideId]);
 
   const handleDelete = async () => {
+    if (!isOwner) {
+        return;
+    }
+
     const confirmed = window.confirm(
       "Are you sure you want to delete this guide? This action cannot be undone."
     );

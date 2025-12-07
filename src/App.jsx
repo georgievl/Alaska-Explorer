@@ -11,6 +11,7 @@ import MyGuidesPage from "./pages/MyGuidesPage.jsx";
 import CreateGuidePage from "./pages/CreateGuidePage.jsx";
 import EditGuidePage from "./pages/EditGuidePage.jsx";
 import ProfilePage from "./pages/ProfilePage.jsx";
+import Footer from "./pages/Footer.jsx";
 
 import { Header } from "./components/Header/Header.jsx";
 import { PrivateRoute } from "./components/route-guards/PrivateRoute.jsx";
@@ -29,6 +30,7 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/guides" element={<GuidesCatalogPage />} />
           <Route path="/guides/:guideId" element={<GuideDetailsPage />} />
+          <Route path="/contact" element={<ContactPage />} />
 
           {/* Guest-only routes */}
           <Route
@@ -83,6 +85,7 @@ function App() {
           />
         </Routes>
       </main>
+      < Footer />
     </>
   );
 }
