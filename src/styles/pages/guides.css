@@ -1,0 +1,196 @@
+/* Guides listing and details */
+
+/* Guide cards used on /guides and home featured section */
+.guide-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.guide-card-image {
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+}
+
+.guide-card-body {
+  padding: 0.9rem 1rem 1rem;
+}
+
+.guide-card-meta {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin: 0 0 0.3rem;
+}
+
+.guide-card-title {
+  font-size: 1rem;
+  margin: 0 0 0.5rem;
+}
+
+.guide-card-link {
+  font-size: 0.85rem;
+  color: #38bdf8;
+}
+
+/* Guides catalog / details */
+
+.guide-details {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.guide-details-header {
+  display: flex;
+  gap: 1.5rem;
+  align-items: stretch;
+  margin-bottom: 1rem;
+}
+
+.guide-details-cover {
+  width: 260px;
+  min-height: 160px;
+  border-radius: 1rem;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid var(--border-strong);
+}
+
+.guide-details-meta {
+  font-size: 0.85rem;
+  color: #9ca3af;
+  margin: 0.25rem 0;
+}
+
+.guide-details-author {
+  font-size: 0.85rem;
+  color: #cbd5f5;
+  margin: 0.1rem 0 0.5rem;
+}
+
+.guide-details-short {
+  font-size: 0.95rem;
+  color: var(--text-main);
+  margin-bottom: 1rem;
+}
+
+.guide-details-content p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #d1d5db;
+  margin: 0 0 0.8rem;
+}
+
+.guide-details-footer {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.guide-details-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .guide-details-header {
+    flex-direction: column-reverse;
+  }
+
+  .guide-details-cover {
+    width: 100%;
+  }
+}
+
+.guide-card-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+}
+
+/* Likes & comments */
+
+.guide-engagement {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-strong);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.guide-likes {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+.guide-comments h2 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.guide-comments-empty,
+.guide-comments-login {
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+.comments-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.comment-item {
+  padding: 0.6rem 0.8rem;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  margin-bottom: 0.3rem;
+  color: #9ca3af;
+}
+
+.comment-author {
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.comment-text {
+  font-size: 0.9rem;
+  color: #d1d5db;
+}
+
+.comment-delete {
+  margin-top: 0.3rem;
+  font-size: 0.75rem;
+  border: none;
+  background: none;
+  color: #fca5a5;
+  cursor: pointer;
+  padding: 0;
+}
+
+.comment-delete:hover {
+  text-decoration: underline;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}

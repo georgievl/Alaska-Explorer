@@ -1,0 +1,139 @@
+/* Profile page */
+
+.profile-page {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.profile-header {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.profile-avatar-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.profile-avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 2px solid var(--border-strong);
+}
+
+.profile-avatar-fallback {
+  width: 96px;
+  height: 96px;
+  border-radius: 999px;
+  background: radial-gradient(circle at top left, #1e293b, #020617);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-main);
+  border: 2px solid var(--border-strong);
+}
+
+.avatar-upload-btn {
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  background-color: #020617;
+  color: var(--text-muted);
+}
+
+.avatar-upload-btn:hover {
+  border-color: #4b5563;
+  color: var(--text-main);
+}
+
+.profile-main-info h1 {
+  margin-bottom: 0.2rem;
+}
+
+.profile-email {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.profile-member-since {
+  font-size: 0.85rem;
+  color: var(--text-soft);
+  margin-top: 0.1rem;
+}
+
+.profile-actions {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.profile-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 2fr) minmax(0, 1.5fr);
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.profile-card h2 {
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.profile-card-text {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 0.7rem;
+}
+
+.profile-stats {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.profile-stats li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.profile-stat-label {
+  color: var(--text-muted);
+}
+
+.profile-stat-value {
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.profile-form .btn {
+  margin-top: 0.2rem;
+}
+
+@media (max-width: 900px) {
+  .profile-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .profile-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
