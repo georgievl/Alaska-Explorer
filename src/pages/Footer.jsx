@@ -41,22 +41,13 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-
-          <div className="footer-col">
-            <h4>Tech stack</h4>
-            <ul>
-              <li>React + React Router</li>
-              <li>Firebase Auth</li>
-              <li>Cloud Firestore</li>
-            </ul>
-          </div>
         </div>
       </div>
 
       <div className="footer-bottom">
         <span>© {year} Alaska Explorer</span>
         <span className="footer-note">
-          Student project – for educational purposes.
+          ReactJS, October2025 – SoftUni
         </span>
       </div>
     </footer>
