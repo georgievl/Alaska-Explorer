@@ -4,6 +4,9 @@ import { useAuth } from "../contexts/AuthContext.jsx";
 import * as guideService from "../services/guideService.js";
 import { Spinner } from "../components/Spinner.jsx";
 
+import { storage } from "../config/firebase";
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
+
 const initialFormValues = {
   title: "",
   region: "",
@@ -13,7 +16,6 @@ const initialFormValues = {
   difficulty: "",
   shortDescription: "",
   content: "",
-  coverImageUrl: "",
 };
 
 export default function CreateGuidePage() {
@@ -21,11 +23,13 @@ export default function CreateGuidePage() {
   const navigate = useNavigate();
 
   const [values, setValues] = useState(initialFormValues);
+  const [coverFile, setCoverFile] = useState(null);
+  const [coverPreview, setCoverPreview] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
 
   if (!isAuthenticated) {
-    // Guarded at route level already, but this is extra safety
+
     return <p>You must be logged in to create a guide.</p>;
   }
 
@@ -35,6 +39,18 @@ export default function CreateGuidePage() {
       ...state,
       [name]: value,
     }));
+  };
+
+  const onCoverFileChange = (e) => {
+    const file = e.target.files?.[0] || null;
+    setCoverFile(file);
+
+    if (file) {
+      const previewUrl = URL.createObjectURL(file);
+      setCoverPreview(previewUrl);
+    } else {
+      setCoverPreview("");
+    }
   };
 
   const onSubmit = async (e) => {
@@ -56,6 +72,17 @@ export default function CreateGuidePage() {
       if (!values.content.trim()) {
         throw new Error("Content is required.");
       }
+      if (!coverFile) {
+        throw new Error("Please upload a cover image for your guide.");
+      }
+
+      const fileRef = ref(
+        storage,
+        `guide-covers/${user.uid}/${Date.now()}_${coverFile.name}`
+      );
+
+      await uploadBytes(fileRef, coverFile);
+      const coverImageUrl = await getDownloadURL(fileRef);
 
       const data = {
         title: values.title.trim(),
@@ -66,7 +93,7 @@ export default function CreateGuidePage() {
         difficulty: values.difficulty.trim(),
         shortDescription: values.shortDescription.trim(),
         content: values.content.trim(),
-        coverImageUrl: values.coverImageUrl.trim(),
+        coverImageUrl,
       };
 
       const newId = await guideService.createGuide(
@@ -75,7 +102,6 @@ export default function CreateGuidePage() {
         user.displayName || user.email
       );
 
-      // Redirect to details page for the new guide
       navigate(`/guides/${newId}`);
     } catch (err) {
       console.error(err);
@@ -187,16 +213,29 @@ export default function CreateGuidePage() {
           />
         </label>
 
-        <label>
-          Cover image URL
-          <input
-            type="url"
-            name="coverImageUrl"
-            placeholder="https://example.com/photo.jpg"
-            value={values.coverImageUrl}
-            onChange={onChange}
-          />
-        </label>
+        <div className="form-row cover-upload-row">
+          <label className="cover-upload-label">
+            Cover image *
+            <input
+              type="file"
+              accept="image/*"
+              onChange={onCoverFileChange}
+            />
+            <span className="cover-upload-help">
+              Upload a photo you took during this trip.
+            </span>
+          </label>
+
+          {coverPreview && (
+            <div className="cover-preview">
+              <p>Preview:</p>
+              <div
+                className="cover-preview-image"
+                style={{ backgroundImage: `url(${coverPreview})` }}
+              />
+            </div>
+          )}
+        </div>
 
         {error && <p className="form-error">{error}</p>}
 

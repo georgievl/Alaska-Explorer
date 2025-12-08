@@ -13,6 +13,7 @@ import {
   arrayUnion,
   arrayRemove,
   increment,
+  limit,
 } from "firebase/firestore";
 import { db } from "../config/firebase";
 
@@ -127,6 +128,21 @@ export async function deleteComment(commentId) {
 
 export async function getCommentsByAuthor(authorId) {
   const q = query(commentsCollection, where("authorId", "==", authorId));
+  const snapshot = await getDocs(q);
+
+  return snapshot.docs.map((d) => ({
+    id: d.id,
+    ...d.data(),
+  }));
+}
+
+export async function getTopGuidesByLikes(max = 3) {
+  const q = query(
+    guidesCollection,
+    orderBy("likesCount", "desc"),
+    limit(max)
+  );
+
   const snapshot = await getDocs(q);
 
   return snapshot.docs.map((d) => ({

@@ -147,10 +147,28 @@ export default function AboutPage() {
                             </figure>
                             <h3>Summer 5 · Coming back “home”</h3>
                             <p>
-                                The last seasons felt less like travel and more like returning
-                                to a second home. I knew when the first buses would roll,
-                                when the crowds would peak, where to escape on a day off, and
-                                how to make the most of every short Alaskan summer.
+                                The last seasons felt less like travel and more like returning to a second
+                                home. By then, I knew the rhythm of the place — when the first buses would
+                                start rolling down the park road, when the crowds would peak and thin out,
+                                which trails stayed quiet even in July, and the exact hour the light hit my
+                                favorite ridge just right.
+                            </p>
+                            <p>
+                                I wasn’t just discovering Alaska anymore; I was reconnecting with a familiar
+                                world of coworkers, returning seasonal friends, local spots that only opened
+                                for a few months each year, and that strange feeling of belonging in a place
+                                that most people only pass through once.
+                            </p>
+                            <p>
+                                On my days off, I slipped easily into a routine of revisiting the views that
+                                meant the most to me — the overlook that felt like breathing room, the tundra
+                                ridge that glowed at midnight, the riverbank where we’d gather after work.
+                                Each return felt like a quiet reminder of how much this place had shaped me.
+                            </p>
+                            <p>
+                                By the fifth summer, Denali wasn’t an adventure anymore. It was a chapter of
+                                life — familiar, wild, demanding, breathtaking, and unforgettable in a way
+                                that stays with you long after the snow returns and the park grows quiet again.
                             </p>
                         </div>
                     </div>
