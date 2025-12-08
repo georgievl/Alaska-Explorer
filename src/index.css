@@ -1023,3 +1023,200 @@ main {
     align-items: flex-start;
   }
 }
+
+.about-page {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 2.3fr) minmax(0, 1.7fr);
+  gap: 1.5rem;
+  align-items: stretch;
+  margin-bottom: 2rem;
+}
+
+.about-hero-text h1 {
+  font-size: 2rem;
+  margin: 0.3rem 0 0.6rem;
+}
+
+.about-hero-lead {
+  font-size: 0.98rem;
+  color: #e5e7eb;
+  line-height: 1.6;
+  margin-bottom: 0.9rem;
+}
+
+.about-hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.about-hero-card {
+  border-radius: 1.25rem;
+  border: 1px solid #111827;
+  background: radial-gradient(circle at top left, #020617, #020617);
+  padding: 1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.about-hero-pill {
+  display: inline-flex;
+  align-self: flex-start;
+  font-size: 0.75rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid #1f2937;
+  color: #9ca3af;
+  background-color: #020617;
+}
+
+.about-hero-highlight {
+  font-size: 0.9rem;
+  color: #e5e7eb;
+}
+
+.about-hero-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.3rem 0 0;
+  font-size: 0.86rem;
+  color: #9ca3af;
+}
+
+.about-hero-list li + li {
+  margin-top: 0.2rem;
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2.2fr) minmax(0, 2.2fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.about-card {
+  border-radius: 1.25rem;
+  border: 1px solid #111827;
+  background: radial-gradient(circle at top left, #020617, #020617);
+  padding: 1.1rem 1.2rem;
+}
+
+.about-card h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+
+.about-text {
+  font-size: 0.9rem;
+  color: #e5e7eb;
+  line-height: 1.6;
+  margin-bottom: 0.7rem;
+}
+
+.about-text-muted {
+  font-size: 0.85rem;
+  color: #9ca3af;
+  line-height: 1.5;
+}
+
+.about-timeline {
+  margin-top: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.about-timeline-item h3 {
+  font-size: 0.95rem;
+  margin-bottom: 0.2rem;
+}
+
+.about-timeline-item p {
+  font-size: 0.85rem;
+  color: #d1d5db;
+  line-height: 1.5;
+}
+
+.about-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.4rem 0 0.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-size: 0.88rem;
+  color: #e5e7eb;
+}
+
+.about-list strong {
+  color: #f9fafb;
+}
+
+.about-tech-list {
+  list-style: disc;
+  padding-left: 1.1rem;
+  margin: 0.3rem 0 0.7rem;
+  font-size: 0.86rem;
+  color: #d1d5db;
+}
+
+.about-experiences .about-text {
+  margin-bottom: 0.5rem;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0.75rem;
+}
+
+.experience-card {
+  border-radius: 0.9rem;
+  border: 1px solid #111827;
+  background: radial-gradient(circle at top left, #020617, #020617);
+  padding: 0.7rem 0.8rem;
+}
+
+.experience-card h3 {
+  font-size: 0.9rem;
+  margin-bottom: 0.2rem;
+}
+
+.experience-card p {
+  font-size: 0.82rem;
+  color: #d1d5db;
+  line-height: 1.5;
+}
+
+.about-footer-cta {
+  border-radius: 1.25rem;
+  border: 1px solid #111827;
+  background: radial-gradient(circle at top left, #020617, #020617);
+  padding: 1rem 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.about-footer-cta h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+
+.about-footer-cta p {
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+.about-footer-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
