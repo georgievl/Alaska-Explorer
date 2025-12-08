@@ -211,6 +211,7 @@ main {
 
 .btn.secondary {
   background-color: transparent;
+  color: white;
   border-color: #1e293b;
 }
 
@@ -1219,4 +1220,72 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+}
+
+.about-photo {
+  margin: 0 0 0.4rem;
+  border-radius: 0.9rem;
+  overflow: hidden;
+  border: 1px solid #111827;
+  background-color: #020617;
+}
+
+.about-photo img {
+  display: block;
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.about-photo figcaption {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  padding: 0.25rem 0.45rem 0.4rem;
+}
+
+.experience-photo {
+  margin: 0 0 0.35rem;
+  border-radius: 0.7rem;
+  overflow: hidden;
+  border: 1px solid #111827;
+  background-color: #020617;
+}
+
+.experience-photo img {
+  display: block;
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.about-timeline-item {
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid #0b1120;
+}
+
+.about-timeline-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.about-layout-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.about-story,
+.about-experiences {
+  align-self: start;
+}
+
+.about-layout-2col .about-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-grid {
+  margin-top: 0.7rem;
 }
