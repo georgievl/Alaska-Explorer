@@ -46,12 +46,18 @@
 }
 
 .guide-details-cover {
-  width: 260px;
-  min-height: 160px;
-  border-radius: 1rem;
+  position: relative;
+  min-height: 83vh;
   background-size: cover;
-  background-position: center;
-  border: 1px solid var(--border-strong);
+  background-position: center center;
+  margin-bottom: 1rem;
+
+  border: 18px solid #1c2920;
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.75),
+    0 10px 25px rgba(29, 87, 48, 0.45);
+  overflow: hidden;
+  
 }
 
 .guide-details-meta {

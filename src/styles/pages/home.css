@@ -11,6 +11,14 @@
   min-height: 60vh;
   background-size: cover;
   background-position: center center;
+
+  border: 18px solid #1c2920;
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.75),
+    0 10px 25px rgba(29, 87, 48, 0.45);
+
+  overflow: hidden;
 }
 
 .hero-overlay {
@@ -21,7 +29,6 @@
   justify-content: center;
   padding: 3rem 1.5rem;
   box-sizing: border-box;
-  /* forest + water overlay tuned to your hero photo */
   background: radial-gradient(
     circle at top,
     rgba(22, 163, 74, 0.35),

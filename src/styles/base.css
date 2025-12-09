@@ -1,11 +1,10 @@
 :root {
-  /* Core palette tuned to your hero image (forest + water) */
   --bg-body: #170214;
   --bg-main-gradient: radial-gradient(circle at top, #044637 0, #516051 55%);
-  --bg-panel: radial-gradient(circle at top left, #020617, #020617);
+  --bg-panel: radial-gradient(circle at top left, #2f473646, #020617);
 
-  --border-subtle: #111827;
-  --border-strong: #1f2937;
+  --border-subtle: #112719;
+  --border-strong: #1f3723;
 
   --text-main: #e5e7eb;
   --text-muted: #9ca3af;
