@@ -3,6 +3,7 @@
 .about-page {
   max-width: 1100px;
   margin: 0 auto;
+  padding: 1.5rem 1rem 2rem;
 }
 
 .about-hero {
@@ -11,7 +12,22 @@
   gap: 1.5rem;
   align-items: stretch;
   margin-bottom: 2rem;
+  padding: 1.5rem 1.25rem;
 }
+
+.about-hero-card {
+  border-radius: 1rem;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-panel);
+  padding: 4.3rem 1.5rem;
+  text-align: center;
+}
+
+.about-hero-text {
+  padding: 0 1.5rem;
+}
+
+/* Hero text + card padding */
 
 .about-hero-text h1 {
   font-size: 2rem;
@@ -35,7 +51,7 @@
   display: inline-flex;
   align-self: flex-start;
   font-size: 0.75rem;
-  padding: 0.1rem 0.5rem;
+  padding: 0.2rem 0.75rem;
   border-radius: 999px;
   border: 1px solid var(--border-strong);
   color: var(--text-muted);
@@ -55,7 +71,7 @@
   color: var(--text-muted);
 }
 
-.about-hero-list li + li {
+.about-hero-list li+li {
   margin-top: 0.2rem;
 }
 
@@ -66,6 +82,7 @@
   grid-template-columns: minmax(0, 2.2fr) minmax(0, 2.2fr);
   gap: 1.5rem;
   margin-bottom: 2rem;
+  padding: 0 1.25rem;
 }
 
 .about-layout-2col {
@@ -73,6 +90,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
   margin-bottom: 2rem;
+  padding: 0 1.25rem;
 }
 
 .about-story,
@@ -87,6 +105,10 @@
 }
 
 /* Standard about cards & text */
+
+.about-card {
+  padding: 1.3rem 1.5rem;
+}
 
 .about-card h2 {
   font-size: 1.1rem;
@@ -114,7 +136,7 @@
 }
 
 .about-timeline-item {
-  padding-bottom: 0.4rem;
+  padding: 0.8rem 0 0.8rem;
   border-bottom: 1px solid #0b1120;
 }
 
@@ -168,6 +190,7 @@
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 0.75rem;
   margin-top: 0.7rem;
+  padding: 0;
 }
 
 .experience-card h3 {
@@ -184,7 +207,7 @@
 /* Footer CTA */
 
 .about-footer-cta {
-  padding: 1rem 1.2rem;
+  padding: 1.3rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -215,6 +238,7 @@
   overflow: hidden;
   border: 1px solid var(--border-subtle);
   background-color: #020617;
+  padding: 0;
 }
 
 .about-photo img {
@@ -227,7 +251,7 @@
 .about-photo figcaption {
   font-size: 0.75rem;
   color: var(--text-muted);
-  padding: 0.25rem 0.45rem 0.4rem;
+  padding: 0.4rem 0.6rem;
 }
 
 .experience-photo {
@@ -236,6 +260,7 @@
   overflow: hidden;
   border: 1px solid var(--border-subtle);
   background-color: #020617;
+  padding: 0;
 }
 
 .experience-photo img {

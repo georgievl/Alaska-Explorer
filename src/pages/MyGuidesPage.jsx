@@ -57,7 +57,6 @@ export default function MyGuidesPage() {
   return (
     <section>
       <h1>My Guides</h1>
-      <p>These are the guides you have created.</p>
 
       {guides.length === 0 ? (
         <p>
