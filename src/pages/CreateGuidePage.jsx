@@ -151,7 +151,7 @@ export default function CreateGuidePage() {
             <input
               type="text"
               name="type"
-              placeholder="Hike, Cruise, City Walk..."
+              placeholder="Hike, Drive, Flight..."
               value={values.type}
               onChange={onChange}
             />
@@ -162,7 +162,7 @@ export default function CreateGuidePage() {
             <input
               type="text"
               name="season"
-              placeholder="Summer, Winter, All Year..."
+              placeholder="Spring, Summer, Fall..."
               value={values.season}
               onChange={onChange}
             />
@@ -173,7 +173,7 @@ export default function CreateGuidePage() {
             <input
               type="text"
               name="duration"
-              placeholder="Half-day, 3 days..."
+              placeholder="3hours, 5hours, 8hours..."
               value={values.duration}
               onChange={onChange}
             />

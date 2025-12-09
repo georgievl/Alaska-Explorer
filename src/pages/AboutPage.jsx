@@ -234,7 +234,7 @@ export default function AboutPage() {
                                     alt="Sled dog presentation in Alaska"
                                 />
                             </figure>
-                            <h3>Sled dog presentations</h3>
+                            <h3>Sled dog presentation</h3>
                             <p>
                                 Learning how working dogs are part of Alaska&apos;s history
                                 and present, not just a photo opportunity. The energy of the

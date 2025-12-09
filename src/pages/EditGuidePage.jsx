@@ -289,16 +289,6 @@ export default function EditGuidePage() {
               Upload a new photo if you want to replace the current cover.
             </span>
           </label>
-
-          {coverPreview && (
-            <div className="cover-preview">
-              <p>Current / New preview:</p>
-              <div
-                className="cover-preview-image"
-                style={{ backgroundImage: `url(${coverPreview})` }}
-              />
-            </div>
-          )}
         </div>
 
         {error && <p className="form-error">{error}</p>}
