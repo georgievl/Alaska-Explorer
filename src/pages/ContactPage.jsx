@@ -141,6 +141,14 @@ export default function ContactPage() {
             <button type="submit" className="btn primary" disabled={submitting}>
               {submitting ? "Sending..." : "Send message"}
             </button>
+
+            {import.meta.env.PROD && (
+              <p className="form-error" style={{ fontSize: "0.8rem" }}>
+                Note: The live contact form may be limited on the deployed version due to
+                EmailJS free plan domain restrictions. It works fully when run locally.
+              </p>
+            )}
+            
           </form>
         </div>
       </div>

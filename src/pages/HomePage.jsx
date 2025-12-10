@@ -4,7 +4,7 @@ import { Spinner } from "../components/Spinner.jsx";
 import * as guideService from "../services/guideService.js";
 
 const HERO_IMAGE = "public/images/home/hero.jpg";
-const FALLBACK_FEATURED_IMAGE = "/images/home/featured-fallback.jpg";
+const FALLBACK_FEATURED_IMAGE = "public/images/home/featured-fallback.jpg";
 
 export default function HomePage() {
     const [featuredGuides, setFeaturedGuides] = useState([]);
