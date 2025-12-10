@@ -30,7 +30,6 @@ export default function HomePage() {
 
     return (
         <div className="home">
-            {/* Hero section */}
             <section
                 className="hero"
                 style={{ backgroundImage: `url(${HERO_IMAGE})` }}
@@ -55,7 +54,6 @@ export default function HomePage() {
             </section>
 
             <main className="home-main">
-                {/* Featured guides */}
                 <section className="section">
                     <div className="section-header">
                         <h2>Featured Guides</h2>

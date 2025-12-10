@@ -59,7 +59,6 @@ export default function CreateGuidePage() {
     setSubmitting(true);
 
     try {
-      // Basic validation
       if (!values.title.trim()) {
         throw new Error("Title is required.");
       }

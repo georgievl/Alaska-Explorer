@@ -13,6 +13,8 @@
 
 .guide-card-body {
   padding: 0.9rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .guide-card-meta {
@@ -29,6 +31,7 @@
 .guide-card-link {
   font-size: 0.85rem;
   color: #4ade80;
+  margin-top: auto;
 }
 
 /* Guides catalog / details */
@@ -49,6 +52,8 @@
   position: relative;
   min-height: 83vh;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(29, 87, 48, 0.45);
   background-position: center center;
   margin-bottom: 1rem;
 
@@ -57,7 +62,7 @@
     0 30px 80px rgba(0, 0, 0, 0.75),
     0 10px 25px rgba(29, 87, 48, 0.45);
   overflow: hidden;
-  
+
 }
 
 .guide-details-meta {

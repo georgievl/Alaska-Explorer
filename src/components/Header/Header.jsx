@@ -20,7 +20,6 @@ export function Header() {
     return (
         <header className="site-header">
             <nav className="nav-bar">
-                {/* Left side */}
                 <div className="nav-left">
                     <NavLink to="/" className="logo">
                         AlaskaExplorer
@@ -52,7 +51,6 @@ export function Header() {
 
                 </div>
 
-                {/* Right side */}
                 <div className="nav-right">
                     {isAuthenticated ? (
                         <>

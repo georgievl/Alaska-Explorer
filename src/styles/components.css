@@ -95,8 +95,11 @@
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, 325px);
   gap: 1.25rem;
+  justify-content: center;
+  max-width: calc(3 * 325px + 2 * 1.25rem);
+  margin: 0 auto;
 }
 
 .region-grid {
@@ -177,6 +180,7 @@
 }
 
 /* Shared input/textarea look */
+
 .auth-form input,
 .guide-form input,
 .guide-form textarea,

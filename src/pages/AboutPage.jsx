@@ -6,7 +6,6 @@ export default function AboutPage() {
 
     return (
         <section className="about-page">
-            {/* HERO */}
             <header className="about-hero">
                 <div className="about-hero-text">
                     <p className="eyebrow">About Alaska Explorer</p>
@@ -51,9 +50,7 @@ export default function AboutPage() {
                 </div>
             </header>
 
-            {/* LAYOUT GRID */}
             <div className="about-layout">
-                {/* MY ALASKA STORY */}
                 <section className="about-card">
                     <h2>My Alaska story</h2>
                     <p className="about-text">
@@ -174,7 +171,6 @@ export default function AboutPage() {
                     </div>
                 </section>
 
-                {/* FAVORITE EXPERIENCES — now side-by-side with story */}
                 <section className="about-card about-experiences">
                     <h2>Some of my favorite Alaska moments</h2>
                     <p className="about-text">
@@ -257,7 +253,6 @@ export default function AboutPage() {
                             </p>
                         </article>
 
-                        {/* BONFIRE NIGHTS */}
                         <article className="experience-card">
                             <figure className="experience-photo">
                                 <img
@@ -290,7 +285,6 @@ export default function AboutPage() {
                             </p>
                         </article>
 
-                        {/* GLACIER LANDING (HELICOPTER) */}
                         <article className="experience-card">
                             <figure className="experience-photo">
                                 <img
@@ -307,7 +301,6 @@ export default function AboutPage() {
                             </p>
                         </article>
 
-                        {/* HIKING — PEAKS, LAKES, TRAILS */}
                         <article className="experience-card">
                             <figure className="experience-photo">
                                 <img
@@ -324,7 +317,6 @@ export default function AboutPage() {
                             </p>
                         </article>
 
-                        {/* WILDLIFE SPOTTING */}
                         <article className="experience-card">
                             <figure className="experience-photo">
                                 <img
@@ -343,7 +335,6 @@ export default function AboutPage() {
                     </div>
                 </section>
 
-                {/* WHAT YOU'LL FIND HERE — now row 2, col 1 */}
                 <section className="about-card">
                     <h2>What you&apos;ll find on Alaska Explorer</h2>
                     <p className="about-text">
@@ -382,7 +373,6 @@ export default function AboutPage() {
                     </p>
                 </section>
 
-                {/* HOW THIS SITE IS BUILT — row 2, col 2 */}
                 <section className="about-card">
                     <h2>How Alaska Explorer is built</h2>
                     <p className="about-text">
@@ -421,7 +411,6 @@ export default function AboutPage() {
                 </section>
             </div>
 
-            {/* CTA FOOTER */}
             <footer className="about-footer-cta">
                 <div>
                     <h2>Ready to explore?</h2>
