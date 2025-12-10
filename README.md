@@ -14,22 +14,22 @@ It’s based on five real summers spent living and working in Denali National Pa
 ![Home Page](screenshots/home.PNG)
 
 ### Guides Catalog
-![Guides Catalog](screenshots/guides-catalog.png)
+![Guides Catalog](screenshots/guides-catalog.PNG)
 
 ### Guide Details
-![Guide Details](screenshots/guide-details.png)
+![Guide Details](screenshots/guide-details.PNG)
 
 ### Create / Edit Guide
-![Create Guide](screenshots/create-guide.png)
+![Create Guide](screenshots/create-guide.PNG)
 
 ### My Guides
-![My Guides](screenshots/my-guides.png)
+![My Guides](screenshots/my-guides.PNG)
 
 ### Profile Page
-![Profile Page](screenshots/profile.png)
+![Profile Page](screenshots/profile.PNG)
 
 ### Contact Page
-![Contact Page](screenshots/contact.png)
+![Contact Page](screenshots/contact.PNG)
 
 ---
 
