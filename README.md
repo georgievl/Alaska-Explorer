@@ -11,7 +11,7 @@ It’s based on five real summers spent living and working in Denali National Pa
 > Screenshots showcasing the main pages and functionality of the application.
 
 ### Home Page
-![Home Page](screenshots/home.png)
+![Home Page](./screenshots/home.png)
 
 ### Guides Catalog
 ![Guides Catalog](screenshots/guides-catalog.png)
